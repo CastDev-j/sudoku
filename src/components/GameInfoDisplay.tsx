@@ -10,17 +10,25 @@ type GameInfoDisplayProp = {
 }
 
 const GameInfoDisplay = ({ setModalState }: GameInfoDisplayProp ) => {
-  const { difficulty, gameClock } = useSudokuStore(state => ({
-    difficulty: state.difficulty,
-    gameClock: state.gameClock
+  const { dificultad, relojDeJuego } = useSudokuStore(state => ({
+    dificultad: state.difficulty as keyof typeof dificultsInSpanish,
+    relojDeJuego: state.gameClock
   }), shallow);
+
+
+  const dificultsInSpanish = {
+    "easy": "Fácil",
+    "medium": "Medio",
+    "hard": "Difícil",
+    "expert": "Experto"
+  }
 
   return (
     <div className={gameInfoDisplay}>
-      <Text>{difficulty.charAt(0).toUpperCase() + difficulty.slice(1)}</Text>
-      <Button variant="light" color="#228be6" compact onClick={() => setModalState(true)}>New Game</Button>
+      <Text>{dificultsInSpanish[dificultad]}</Text>
+      <Button variant="light" color="#228be6" compact onClick={() => setModalState(true)}>Nuevo Juego</Button>
       <Text>
-        {convertGameClockToString(gameClock)}
+        {convertGameClockToString(relojDeJuego)}
       </Text>
     </div>
   );

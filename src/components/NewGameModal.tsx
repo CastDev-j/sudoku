@@ -13,10 +13,10 @@ type NewGameModalProps = {
 }
 
 const DifficultyOptions = [
-  { value: "easy", label: "Easy" },
-  { value: "medium", label: "Medium" },
-  { value: "hard", label: "Hard" },
-  { value: "expert", label: "Expert" }
+  { value: "easy", label: "Fácil" },
+  { value: "medium", label: "Medio" },
+  { value: "hard", label: "Difícil" },
+  { value: "expert", label: "Experto" }
 ]
 
 const NewGameModal = ({ isOpen, setIsOpen, clockIsRunning, setClockIsRunning }: NewGameModalProps) => {
@@ -55,20 +55,20 @@ const NewGameModal = ({ isOpen, setIsOpen, clockIsRunning, setClockIsRunning }: 
   return (
     <Modal opened={isOpen} onClose={handleClose} centered padding="xl">
       <Container size="90%">
-        <Title order={1} size="h2">New Game</Title>
+        <Title order={1} size="h2">Nuevo Juego</Title>
         <Space h="md" />
-        <Text align="left">Please Select A Difficulty:</Text>
+        <Text align="left">Por favor seleccione una dificultad:</Text>
         <Space h="sm" />
         <Select
           data-autofocus
-          placeholder="Select..."
+          placeholder="Seleccione..."
           data={DifficultyOptions}
           onChange={(value) => setDifficulty(value || "")}
           dropdownPosition="bottom"
           withinPortal={true}
         />
         <Space h="xl" />
-        <Button onClick={handleClick}>Create Game</Button>
+        <Button onClick={handleClick}>Crear Juego</Button>
       </Container>
     </Modal>
   );

@@ -19,7 +19,7 @@ const GameContainer = ({ setNewGameModalState, setFinishGameModalState }: GameCo
       <Container size="23rem">
           <Stack>
             <Paper shadow="xs" radius="md" p="sm">
-              <Title className={heading}>Sudoku</Title>
+              <Title className={heading}>Sudoku Lite</Title>
             </Paper>
             <Paper shadow="xs" radius="md" p="sm">
               <GameInfoDisplay setModalState={setNewGameModalState} />
@@ -30,7 +30,7 @@ const GameContainer = ({ setNewGameModalState, setFinishGameModalState }: GameCo
             <Paper shadow="xs" radius="md" p="sm">
               <NumberSelector notesEnabled={notesEnabled} />
               <Space h="md" />
-              <Button className="toggleNotesButton" variant="light" compact onClick={() => setNotesEnabled(!notesEnabled)}>Toggle Notes</Button>
+              <Button className="toggleNotesButton" variant="light" compact onClick={() => setNotesEnabled(!notesEnabled)}>Alternar Notas</Button>
             </Paper>
           </Stack>
         </Container>

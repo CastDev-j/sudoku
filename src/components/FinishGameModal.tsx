@@ -25,11 +25,11 @@ const FinishGameModal = ({ isOpen, setIsOpen, clockIsRunning, setClockIsRunning 
   return (
     <Modal opened={isOpen} onClose={handleClose} centered padding="xl">
       <Container size="90%">
-        <Title order={1} size="h2">&#127881; Nice Job! &#127881;</Title>
+        <Title order={1} size="h2">&#127881; ¡Buen Trabajo! &#127881;</Title>
         <Space h="md" />
-        <Text align="left">You have solved the puzzle with a time of {convertGameClockToString(gameClock)}. After closing this popup, you can click on the <Code>New Game</Code> button to generate a new puzzle.</Text>
+        <Text align="left">Has resuelto el rompecabezas con un tiempo de {convertGameClockToString(gameClock)}. Después de cerrar este popup, puedes hacer clic en el botón <Code>Nuevo Juego</Code> para generar un nuevo rompecabezas.</Text>
         <Space h="xl" />
-        <Button onClick={handleClose}>Close</Button>
+        <Button onClick={handleClose}>Cerrar</Button>
       </Container>
     </Modal>
   );

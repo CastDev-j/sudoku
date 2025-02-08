@@ -7,9 +7,9 @@ const Footer = () => {
     <footer className={footer}>
       <Paper shadow="xs" radius="md" p="sm">
         <Anchor className={footerLink} href="https://github.com/mattkolega/sudoku" target="_blank" color="black">
-          <Text>Built by Matthew Kolega using&nbsp;</Text>
+          <Text>Construido usando&nbsp;</Text>
           <BiLogoReact color="#61DBFB" />
-          <Text>&nbsp;and&nbsp;</Text>
+          <Text>&nbsp;y&nbsp;</Text>
           <BiLogoTypescript color="#2D79C7" />
         </Anchor>
       </Paper>
